@@ -31,7 +31,9 @@ def play(songs)
         puts "Playing #{songs.find{|song| song == input}}"
     elsif input.to_i > 0 && input.to_i <= songs.length
         puts "Playing #{songs[input.to_i - 1]}"
-    else 
+    elsif input == "exit"
+        exit_jukebox
+    else
         puts "Invalid input, please try again"
     end
 end
